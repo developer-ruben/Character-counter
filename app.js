@@ -41,6 +41,9 @@ class ThemeToggle {
     this.buttonIcon.src = isLight
       ? this.buttonIcon.dataset.light
       : this.buttonIcon.dataset.dark;
+    this.themeButton.ariaLabel = isLight
+      ? "Change to light theme"
+      : "Change to dark theme";
   }
 }
 
