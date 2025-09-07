@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Character counter</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a href="#"
+          ><img
+            class="header__logo"
+            src="./assets/images/logo-dark-theme.svg"
+            alt=""
+        /></a>
+        <button class="header__button" id="theme-button">
+          <img
+            class="header__button-icon"
+            src="./assets/images/icon-sun.svg"
+            width="22"
+            height="22"
+            alt=""
+          />
+        </button>
+      </header>
+
+      <main class="main">
+        <h1 class="main__title">Analyze your text in real-time.</h1>
+        <div class="text">
+          <div class="text__input-container">
+            <textarea
+              class="text__input"
+              name="text"
+              id="text"
+              placeholder="Start typing here… (or paste your text)
+"
+            ></textarea>
+
+            <p class="text__error">
+              <img
+                src="./assets/images/icon-info.svg"
+                width="14"
+                height="15"
+                alt="Info Icon"
+              />
+              <span
+                >Limit reached! Your text exceeds
+                <span id="character-limit-value"></span> characters.</span
+              >
+            </p>
+          </div>
+          <div class="text__settings">
+            <div class="text__filters">
+              <div class="text__filter">
+                <input
+                  class="text__check"
+                  type="checkbox"
+                  name="spaces"
+                  id="spaces"
+                />
+
+                <label class="text__label" for="spaces">Exclude Spaces</label>
+              </div>
+              <div class="text__filter">
+                <input
+                  class="text__check"
+                  type="checkbox"
+                  name="character-limit"
+                  id="character-limit"
+                />
+                <label class="text__label" for="character-limit">
+                  Set Character Limit</label
+                >
+                <input
+                  class="text__number"
+                  type="number"
+                  name="number"
+                  id="number"
+                  min="0"
+                  max="999"
+                />
+              </div>
+            </div>
+            <div>
+              Approx. reading time:
+              <span id="reading-time">0 minutes</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info">
+          <div class="info__item info__item--total-chars">
+            <span class="info__number" id="total-chars">00</span>
+            Total Characters
+          </div>
+          <div class="info__item info__item--word-count">
+            <span class="info__number" id="word-count">00</span>
+            Word Count
+          </div>
+          <div class="info__item info__item--sentence-count">
+            <span class="info__number" id="sentence-count">00</span>
+            Sentence Count
+          </div>
+        </div>
+
+        <div class="density">
+          <h2 class="density_title">Letter Density</h2>
+          <p class="density__text" id="no-letters">
+            No characters found. Start typing to see letter density.
+          </p>
+
+          <div class="density__letters" id="letters"></div>
+
+          <div class="density__links">
+            <div class="density__link" id="more">
+              See more
+              <img
+                src="./assets/images/icon-arrow-down.svg"
+                width="12"
+                height="7"
+                alt="Icon Down"
+              />
+            </div>
+            <div class="density__link" id="less">
+              See less
+              <img
+                src="./assets/images/icon-arrow-up.svg"
+                width="12"
+                height="7"
+                alt="Icon Up"
+              />
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
